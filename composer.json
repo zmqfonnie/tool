@@ -11,9 +11,6 @@
             "email": "2831412977@qq.com"
         }
     ],
-    "require": {
-        "php": ">=5.5"
-    },
     "autoload": {
         "psr-4": {
             "Fonnie\\": "src"

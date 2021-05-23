@@ -5,18 +5,20 @@
  * Time: 20:00:35
  */
 
-use Fonnie\Http;
+
 use PHPUnit\Framework\TestCase;
 
 //换源 composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
-//运行 vendor\bin\phpunit tests
+//运行 phpunit tests
+
+require_once 'autoload.php';
 
 class HttpTest extends TestCase
 {
 
     public function testTest()
     {
-        $data = Http::post('nbxtkf.xxnmkj.cn/test.php');
+        $data = \Fonnie\Http::post('nbxtkf.xxnmkj.cn/test.php');
         $this->log($data);
     }
 
