@@ -1,5 +1,5 @@
 {
-    "name": "fonnie/tool",
+    "name": "zmqfonnie/tool",
     "description": "Fonnie的工具箱",
     "keywords": ["PHP"],
     "type": "library",
