@@ -1,6 +1,6 @@
 <?php
 
-namespace Fonnie;
+namespace Fonnie\Tool;
 
 /**
  * Http 请求类
@@ -33,6 +33,21 @@ class Http
         $req = self::sendRequest($url, $params, 'GET', $options);
         return $req['ret'] ? $req['msg'] : '';
     }
+
+    /**
+     * 发送一个Raw请求
+     * @param string $url     请求URL
+     * @param array  $params  请求参数
+     * @param array  $options 扩展参数
+     * @return mixed|string
+     */
+    public static function raw($url, $params = [], $options = []){
+
+
+        $req = self::sendRequest($url, $params, 'POST', $options);
+        return $req;
+    }
+
 
     /**
      * CURL发送Request请求,含POST和REQUEST
