@@ -39,11 +39,3 @@ if (!function_exists('dump')) {
 
 }
 
-if (!function_exists('log')) {
-
-    function log($data = [])
-    {
-        file_put_contents(__DIR__ . '/' . __CLASS__ . '.log', json_encode($data) . "\r\n", 8);
-    }
-
-}
