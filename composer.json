@@ -17,7 +17,7 @@
         }
     },
     "require-dev": {
-        "monolog/monolog": "^2.2",
-        "phpunit/phpunit": "8.*"
+        "filp/whoops": "^2.13",
+        "symfony/var-dumper": "^5.3"
     }
 }

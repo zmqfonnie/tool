@@ -4,3 +4,5 @@
 /push.bat
 *.log
 .env
+.htaccess
+nginx.htaccess
