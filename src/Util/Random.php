@@ -1,6 +1,6 @@
 <?php
 
-namespace Fonnie;
+namespace Fonnie\Util;
 
 /**
  * 随机生成类

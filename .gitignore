@@ -5,3 +5,4 @@
 .env
 .htaccess
 nginx.htaccess
+phpunit.xml
