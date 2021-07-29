@@ -1,7 +1,6 @@
 /.idea
 /.vscode
 /vendor
-/push.bat
 *.log
 .env
 .htaccess
