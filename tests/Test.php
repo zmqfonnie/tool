@@ -3,7 +3,9 @@
 namespace  Tests;
 require __DIR__.'/../vendor/autoload.php';
 
+use Fonnie\Util\Random;
 use GuzzleHttp\Client;
+use Monolog\Formatter\JsonFormatter;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use PHPUnit\Framework\TestCase;
@@ -28,19 +30,27 @@ class Test extends TestCase
 //        $this->assertEquals('《三体》', \Fonnie\Util\Random::alnum());
     }
 
+    public function testChange(){
+
+        $this->assertEquals(true, 123);
+    }
+
 
     public function Log()
     {
 
         // create a log channel
+        echo __DIR__ . '/logs/'.__CLASS__.'.log';
+        $logger = new \Monolog\Logger('日志实例标识');
 
-        $log = new \Monolog\Logger('Tester');
+        $stream_handler = new StreamHandler(__DIR__ . '/logs/'.__CLASS__.'.log', Logger::INFO);
+        $stream_handler->setFormatter(new JsonFormatter());
+        $logger->pushHandler($stream_handler);
 
-        $log->pushHandler(new StreamHandler(__DIR__ . '/logs/test.log', Logger::WARNING));
+        $logger->error("Error");
 
-        $log->error("Error");
-
-        return $log;
+        $logger->info('Adding a new user', ['username' => new Random()]);
+        return $logger;
 
     }
 }
